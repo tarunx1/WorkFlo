@@ -288,34 +288,36 @@ const TaskBoard = () => {
             <HiMiniMagnifyingGlass className="text-gray-700" />
           </button>
         </div>
-        <div className="flex flex-row gap-4 w-full justify-center sm:justify-end">
-          <Link href="#" legacyBehavior>
-            <a className="text-gray-700 flex flex-row justify-center items-center gap-2">
-              Calendar <SlCalender />
-            </a>
-          </Link>
-          <Link href="#" legacyBehavior>
-            <a className="text-gray-700 flex flex-row justify-center items-center gap-2">
-              Automation <BsStars />
-            </a>
-          </Link>
-          <Link href="#" legacyBehavior>
-            <a className="text-gray-700 flex flex-row justify-center items-center gap-2">
-              Filter <CiFilter />
-            </a>
-          </Link>
-          <Link href="#" legacyBehavior>
-            <a className="text-gray-700 flex flex-row justify-center items-center gap-2">
-              Share <HiOutlineShare />
-            </a>
-          </Link>
-          <button
-            className="py-2.5 px-4 big-button text-white rounded transition duration-200 hover:bg-purple-700 flex items-center justify-center"
-            onClick={() => handleAddNewTask(null, null)}
-          >
-            Create new task
-            <FaPlus className="ml-2 bg-white text-purple-900 rounded-full" />
-          </button>
+        <div className="absolute right-0 flex flex-wrap justify-end w-full gap-4 sm:w-auto">
+          <div className="flex flex-row gap-4">
+            <Link href="#" legacyBehavior>
+              <a className="text-gray-700 flex flex-row justify-center items-center gap-2">
+                Calendar <SlCalender />
+              </a>
+            </Link>
+            <Link href="#" legacyBehavior>
+              <a className="text-gray-700 flex flex-row justify-center items-center gap-2">
+                Automation <BsStars />
+              </a>
+            </Link>
+            <Link href="#" legacyBehavior>
+              <a className="text-gray-700 flex flex-row justify-center items-center gap-2">
+                Filter <CiFilter />
+              </a>
+            </Link>
+            <Link href="#" legacyBehavior>
+              <a className="text-gray-700 flex flex-row justify-center items-center gap-2">
+                Share <HiOutlineShare />
+              </a>
+            </Link>
+            <button
+              className="py-2.5 px-4 big-button text-white rounded transition duration-200 hover:bg-purple-700 flex items-center justify-center"
+              onClick={() => handleAddNewTask(null, null)}
+            >
+              Create new task
+              <FaPlus className="ml-2 bg-white text-purple-900 rounded-full" />
+            </button>
+          </div>
         </div>
       </div>
       <div className="bg-gray-50 rounded-md p-4">
