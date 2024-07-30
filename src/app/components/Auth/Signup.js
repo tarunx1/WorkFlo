@@ -1,4 +1,5 @@
 import React, { useState, useContext, useEffect } from 'react';
+import Link from 'next/link';
 import { AuthContext } from '../../context/AuthContext';
 import { useRouter } from 'next/router';
 
@@ -23,7 +24,7 @@ const Signup = () => {
 
     return (
         <div className="auth-container">
-        <h2 className='font-bold text-3xl'>Welcome to <span className='text-purple-500'>Workflo!</span></h2>
+            <h2 className='font-bold text-3xl'>Welcome to <span className='text-purple-500'>Workflo!</span></h2>
             <form onSubmit={handleSubmit} className='flex flex-col gap-3'>
                 <input
                     type="email"
@@ -46,9 +47,13 @@ const Signup = () => {
                     onChange={(e) => setPassword(e.target.value)}
                     required
                 />
-                <button type="submit" className='big-button'>Login</button>
+                <button type="submit" className='big-button'>Sign Up</button>
             </form>
-            <p className='pt-4'>Already have an account? <a href="/login" className='text-purple-500'>Log in</a></p>
+            <p className='pt-4'>Already have an account?{' '}
+                <Link href="/login">
+                    <a className='text-purple-500'>Log in</a>
+                </Link>
+            </p>
         </div>
     );
 };
